@@ -1,5 +1,76 @@
 {
-  "Metro.Station": {},
+  "Lines": {
+    "11": {
+      "number": "11",
+      "name": "Большая кольцевая линия",
+      "color": "MediumAquaMarine"
+    },
+    "01": {
+      "number": "01",
+      "name": "Сокольническая линия",
+      "color": "Crimson"
+    },
+    "12": {
+      "number": "12",
+      "name": "Бутовская линия",
+      "color": "LightSteelBlue"
+    },
+    "02": {
+      "number": "02",
+      "name": "Замоскворецкая линия",
+      "color": "LimeGreen"
+    },
+    "03": {
+      "number": "03",
+      "name": "Арбатско-Покровская линия",
+      "color": "DarkCyan"
+    },
+    "04": {
+      "number": "04",
+      "name": "Филёвская линия",
+      "color": "DeepSkyBlue"
+    },
+    "15": {
+      "number": "15",
+      "name": "Некрасовская линия",
+      "color": "PaleVioletRed"
+    },
+    "05": {
+      "number": "05",
+      "name": "Кольцевая линия",
+      "color": "Sienna"
+    },
+    "06": {
+      "number": "06",
+      "name": "Калужско-Рижская линия",
+      "color": "GoldenRod"
+    },
+    "07": {
+      "number": "07",
+      "name": "Таганско-Краснопресненская линия",
+      "color": "Purple"
+    },
+    "08": {
+      "number": "08",
+      "name": "Калининская линия",
+      "color": "Gold"
+    },
+    "09": {
+      "number": "09",
+      "name": "Серпуховско-Тимирязевская линия",
+      "color": "DarkGray"
+    },
+    "8А": {
+      "number": "8А",
+      "name": "Солнцевская линия",
+      "color": "Gold"
+    },
+    "10": {
+      "number": "10",
+      "name": "Люблинско-Дмитровская линия",
+      "color": "YellowGreen"
+    }
+  },
   "stations": [
     {
       "name": "Библиотека имени Ленина",
@@ -1682,6 +1753,14 @@
       }
     },
     {
+      "name": "Некрасовка",
+      "line": {
+        "number": "15",
+        "name": "Некрасовская линия",
+        "color": "PaleVioletRed"
+      }
+    },
+    {
       "name": "Улица Дмитриевского",
       "line": {
         "number": "15",
@@ -1819,4 +1898,6 @@
     }
   ],
   "connections": {}
+}: {}
+}
 }

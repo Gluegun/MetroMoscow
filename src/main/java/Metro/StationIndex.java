@@ -6,11 +6,10 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class StationIndex {
-    @SerializedName("Metro.Station")
+    @SerializedName("Lines")
     HashMap<String, Line> number2line;
     TreeSet<Station> stations;
     TreeMap<Station, TreeSet<Station>> connections; // связи станций?
-
 
     public StationIndex() {
         number2line = new HashMap<>();

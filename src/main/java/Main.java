@@ -38,14 +38,15 @@ public class Main {
             String lineNumber = table.child(0).child(0).select("span").text();
             String color;
             String hexValue = table.child(0).attr("style");
+            System.out.println("Станция: " + station);
+            System.out.println("Линия №" + lineNumber + " " + lineName);
+
 
             if (!hexValue.isEmpty()) color = colorConverter(hexValue);
             else continue;
-
-            if (station.equals("Некрасовка")) break;
-
-//            index.addLine(new Line(lineNumber, lineName, color));
             index.addStation(new Station(station, new Line(lineNumber, lineName, color)));
+            index.addLine(new Line(lineNumber, lineName, color));
+            if (station.equals("Некрасовка")) break;
 
         }
 
