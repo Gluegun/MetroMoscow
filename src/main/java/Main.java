@@ -35,8 +35,8 @@ public class Main {
 
             String station = table.child(1).text();
             String lineName = table.select("img[alt]").first().attr("alt");
+            String lineNumber = table.child(0).child(0).select("span").text();
             String color;
-            double lineNumber = Double.parseDouble(table.select("td").attr("data-sort-value"));
             String hexValue = table.child(0).attr("style");
 
             if (!hexValue.isEmpty()) color = colorConverter(hexValue);

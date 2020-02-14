@@ -1,6 +1,8 @@
-/*
+package TestAndOther;
+
 import java.awt.*;
 
+import TestAndOther.ColorUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -23,7 +25,8 @@ public class TestClass {
 
             String station = table.child(1).text();
             String lineName = table.select("img[alt]").first().attr("alt");
-            double lineNumber = Double.parseDouble(table.select("td").attr("data-sort-value"));
+            //double lineNumber = Double.parseDouble(table.select("td").attr("data-sort-value"));
+            String lineNumber = table.child(0).child(0).select("span").text();
             System.out.println("Станция: " + station);
             System.out.println("Линия №:" + lineNumber + " " + lineName);
             String hexValue = table.child(0).attr("style");
@@ -47,4 +50,3 @@ public class TestClass {
         return color;
     }
 }
-*/

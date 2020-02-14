@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Line implements Comparable<Line> {
-    private double number;
+    private String number;
     private String name;
     //private List<Station> stations;
     private String color;
 
-    public Line(double number, String name, String color) {
+    public Line(String number, String name, String color) {
         this.number = number;
         this.name = name;
         this.color = color;
         //stations = new ArrayList<>();
     }
 
-    public double getNumber() {
+    public String getNumber() {
         return number;
     }
 
@@ -34,7 +34,7 @@ public class Line implements Comparable<Line> {
 
     @Override
     public int compareTo(Line line) {
-        return Double.compare(number, line.getNumber());
+        return this.getNumber().compareTo(line.getNumber());
     }
 
     @Override
