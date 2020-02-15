@@ -1,3 +1,6 @@
 # Project exclude paths
 /target/
-/.idea/
+.idea/
+src/main/java/TestAndOther
+
+*.iml
