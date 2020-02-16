@@ -6,14 +6,14 @@ import java.util.List;
 public class Line implements Comparable<Line> {
     private String number;
     private String name;
-    //private List<Station> stations;
+    private List<Station> stations;
     private String color;
 
     public Line(String number, String name, String color) {
         this.number = number;
         this.name = name;
         this.color = color;
-        //stations = new ArrayList<>();
+        stations = new ArrayList<>();
     }
 
     public String getNumber() {
@@ -24,13 +24,13 @@ public class Line implements Comparable<Line> {
         return name;
     }
 
-    /*public void addStation(Station station) {
+    public void addStation(Station station) {
         stations.add(station);
     }
 
     public List<Station> getStations() {
         return stations;
-    }*/
+    }
 
     @Override
     public int compareTo(Line line) {
@@ -42,4 +42,12 @@ public class Line implements Comparable<Line> {
         return compareTo((Line) obj) == 0;
     }
 
+    @Override
+    public String toString() {
+        return "Line{" +
+                "number='" + number + '\'' +
+                ", name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }

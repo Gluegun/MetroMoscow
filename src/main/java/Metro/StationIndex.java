@@ -2,6 +2,7 @@ package Metro;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.beans.Transient;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -37,7 +38,7 @@ public class StationIndex {
         }
     }
 
-    public Line getLine(int number) {
+    public Line getLine(String number) {
         return number2line.get(number); // получаем значение по ключу
     }
 
@@ -50,7 +51,7 @@ public class StationIndex {
         return null;
     }
 
-    public Station getStation(String name, int lineNumber) {
+    public Station getStation(String name, String lineNumber) {
         Station query = new Station(name, getLine(lineNumber));
         Station station = stations.ceiling(query); // ceiling возвращает ближайший элемент, но больше, чем текущий. Как это работает с Object?
         return station.equals(query) ? station : null;
@@ -61,5 +62,14 @@ public class StationIndex {
             return connections.get(station);
         }
         return new TreeSet<>();
+    }
+
+    @Override
+    public String toString() {
+        return "StationIndex{" +
+                "number2line=" + number2line +
+                ", stations=" + stations +
+                ", connections=" + connections +
+                '}';
     }
 }

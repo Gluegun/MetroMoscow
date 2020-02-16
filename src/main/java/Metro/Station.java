@@ -35,7 +35,7 @@ public class Station implements Comparable<Station> {
 
     @Override
     public String toString() {
-        return "Metro.Station{" +
+        return "Station{" +
                 "name='" + name + '\'' +
                 ", line=" + line +
                 '}';

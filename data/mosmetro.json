@@ -1,73 +1,87 @@
 {
-  "Lines": {
+  "number2line": {
     "11": {
       "number": "11",
       "name": "Большая кольцевая линия",
+      "stations": [],
       "color": "MediumAquaMarine"
     },
     "01": {
       "number": "01",
       "name": "Сокольническая линия",
+      "stations": [],
       "color": "Crimson"
     },
     "12": {
       "number": "12",
       "name": "Бутовская линия",
+      "stations": [],
       "color": "LightSteelBlue"
     },
     "02": {
       "number": "02",
       "name": "Замоскворецкая линия",
+      "stations": [],
       "color": "LimeGreen"
     },
     "03": {
       "number": "03",
       "name": "Арбатско-Покровская линия",
+      "stations": [],
       "color": "DarkCyan"
     },
     "04": {
       "number": "04",
       "name": "Филёвская линия",
+      "stations": [],
       "color": "DeepSkyBlue"
     },
     "15": {
       "number": "15",
       "name": "Некрасовская линия",
+      "stations": [],
       "color": "PaleVioletRed"
     },
     "05": {
       "number": "05",
       "name": "Кольцевая линия",
+      "stations": [],
       "color": "Sienna"
     },
     "06": {
       "number": "06",
       "name": "Калужско-Рижская линия",
+      "stations": [],
       "color": "GoldenRod"
     },
     "07": {
       "number": "07",
       "name": "Таганско-Краснопресненская линия",
+      "stations": [],
       "color": "Purple"
     },
     "08": {
       "number": "08",
       "name": "Калининская линия",
+      "stations": [],
       "color": "Gold"
     },
     "09": {
       "number": "09",
       "name": "Серпуховско-Тимирязевская линия",
+      "stations": [],
       "color": "DarkGray"
     },
     "8А": {
       "number": "8А",
       "name": "Солнцевская линия",
+      "stations": [],
       "color": "Gold"
     },
     "10": {
       "number": "10",
       "name": "Люблинско-Дмитровская линия",
+      "stations": [],
       "color": "YellowGreen"
     }
   },
@@ -77,6 +91,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -85,6 +100,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -93,6 +109,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -101,6 +118,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -109,6 +127,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -117,6 +136,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -125,6 +145,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -133,6 +154,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -141,6 +163,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -149,6 +172,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -157,6 +181,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -165,6 +190,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -173,6 +199,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -181,6 +208,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -189,6 +217,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -197,6 +226,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -205,6 +235,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -213,6 +244,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -221,6 +253,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -229,6 +262,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -237,6 +271,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -245,6 +280,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -253,6 +289,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -261,6 +298,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -269,6 +307,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -277,6 +316,7 @@
       "line": {
         "number": "01",
         "name": "Сокольническая линия",
+        "stations": [],
         "color": "Crimson"
       }
     },
@@ -285,6 +325,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -293,6 +334,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -301,6 +343,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -309,6 +352,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -317,6 +361,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -325,6 +370,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -333,6 +379,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -341,6 +388,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -349,6 +397,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -357,6 +406,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -365,6 +415,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -373,6 +424,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -381,6 +433,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -389,6 +442,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -397,6 +451,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -405,6 +460,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -413,6 +469,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -421,6 +478,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -429,6 +487,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -437,6 +496,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -445,6 +505,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -453,6 +514,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -461,6 +523,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -469,6 +532,7 @@
       "line": {
         "number": "02",
         "name": "Замоскворецкая линия",
+        "stations": [],
         "color": "LimeGreen"
       }
     },
@@ -477,6 +541,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -485,6 +550,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -493,6 +559,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -501,6 +568,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -509,6 +577,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -517,6 +586,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -525,6 +595,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -533,6 +604,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -541,6 +613,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -549,6 +622,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -557,6 +631,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -565,6 +640,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -573,6 +649,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -581,6 +658,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -589,6 +667,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -597,6 +676,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -605,6 +685,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -613,6 +694,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -621,6 +703,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -629,6 +712,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -637,6 +721,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -645,6 +730,7 @@
       "line": {
         "number": "03",
         "name": "Арбатско-Покровская линия",
+        "stations": [],
         "color": "DarkCyan"
       }
     },
@@ -653,6 +739,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -661,6 +748,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -669,6 +757,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -677,6 +766,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -685,6 +775,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -693,6 +784,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -701,6 +793,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -709,6 +802,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -717,6 +811,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -725,6 +820,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -733,6 +829,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -741,6 +838,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -749,6 +847,7 @@
       "line": {
         "number": "04",
         "name": "Филёвская линия",
+        "stations": [],
         "color": "DeepSkyBlue"
       }
     },
@@ -757,6 +856,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -765,6 +865,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -773,6 +874,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -781,6 +883,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -789,6 +892,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -797,6 +901,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -805,6 +910,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -813,6 +919,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -821,6 +928,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -829,6 +937,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -837,6 +946,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -845,6 +955,7 @@
       "line": {
         "number": "05",
         "name": "Кольцевая линия",
+        "stations": [],
         "color": "Sienna"
       }
     },
@@ -853,6 +964,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -861,6 +973,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -869,6 +982,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -877,6 +991,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -885,6 +1000,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -893,6 +1009,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -901,6 +1018,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -909,6 +1027,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -917,6 +1036,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -925,6 +1045,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -933,6 +1054,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -941,6 +1063,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -949,6 +1072,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -957,6 +1081,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -965,6 +1090,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -973,6 +1099,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -981,6 +1108,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -989,6 +1117,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -997,6 +1126,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -1005,6 +1135,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -1013,6 +1144,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -1021,6 +1153,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -1029,6 +1162,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -1037,6 +1171,7 @@
       "line": {
         "number": "06",
         "name": "Калужско-Рижская линия",
+        "stations": [],
         "color": "GoldenRod"
       }
     },
@@ -1045,6 +1180,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1053,6 +1189,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1061,6 +1198,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1069,6 +1207,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1077,6 +1216,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1085,6 +1225,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1093,6 +1234,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1101,6 +1243,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1109,6 +1252,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1117,6 +1261,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1125,6 +1270,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1133,6 +1279,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1141,6 +1288,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1149,6 +1297,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1157,6 +1306,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1165,6 +1315,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1173,6 +1324,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1181,6 +1333,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1189,6 +1342,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1197,6 +1351,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1205,6 +1360,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1213,6 +1369,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1221,6 +1378,7 @@
       "line": {
         "number": "07",
         "name": "Таганско-Краснопресненская линия",
+        "stations": [],
         "color": "Purple"
       }
     },
@@ -1229,6 +1387,7 @@
       "line": {
         "number": "08",
         "name": "Калининская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1237,6 +1396,7 @@
       "line": {
         "number": "08",
         "name": "Калининская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1245,6 +1405,7 @@
       "line": {
         "number": "08",
         "name": "Калининская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1253,6 +1414,7 @@
       "line": {
         "number": "08",
         "name": "Калининская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1261,6 +1423,7 @@
       "line": {
         "number": "08",
         "name": "Калининская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1269,6 +1432,7 @@
       "line": {
         "number": "08",
         "name": "Калининская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1277,6 +1441,7 @@
       "line": {
         "number": "08",
         "name": "Калининская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1285,6 +1450,7 @@
       "line": {
         "number": "08",
         "name": "Калининская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1293,6 +1459,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1301,6 +1468,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1309,6 +1477,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1317,6 +1486,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1325,6 +1495,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1333,6 +1504,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1341,6 +1513,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1349,6 +1522,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1357,6 +1531,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1365,6 +1540,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1373,6 +1549,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1381,6 +1558,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1389,6 +1567,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1397,6 +1576,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1405,6 +1585,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1413,6 +1594,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1421,6 +1603,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1429,6 +1612,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1437,6 +1621,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1445,6 +1630,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1453,6 +1639,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1461,6 +1648,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1469,6 +1657,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1477,6 +1666,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1485,6 +1675,7 @@
       "line": {
         "number": "09",
         "name": "Серпуховско-Тимирязевская линия",
+        "stations": [],
         "color": "DarkGray"
       }
     },
@@ -1493,6 +1684,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1501,6 +1693,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1509,6 +1702,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1517,6 +1711,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1525,6 +1720,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1533,6 +1729,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1541,6 +1738,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1549,6 +1747,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1557,6 +1756,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1565,6 +1765,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1573,6 +1774,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1581,6 +1783,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1589,6 +1792,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1597,6 +1801,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1605,6 +1810,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1613,6 +1819,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1621,6 +1828,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1629,6 +1837,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1637,6 +1846,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1645,6 +1855,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1653,6 +1864,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1661,6 +1873,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1669,6 +1882,7 @@
       "line": {
         "number": "10",
         "name": "Люблинско-Дмитровская линия",
+        "stations": [],
         "color": "YellowGreen"
       }
     },
@@ -1677,6 +1891,7 @@
       "line": {
         "number": "11",
         "name": "Большая кольцевая линия",
+        "stations": [],
         "color": "MediumAquaMarine"
       }
     },
@@ -1685,6 +1900,7 @@
       "line": {
         "number": "12",
         "name": "Бутовская линия",
+        "stations": [],
         "color": "LightSteelBlue"
       }
     },
@@ -1693,6 +1909,7 @@
       "line": {
         "number": "12",
         "name": "Бутовская линия",
+        "stations": [],
         "color": "LightSteelBlue"
       }
     },
@@ -1701,6 +1918,7 @@
       "line": {
         "number": "12",
         "name": "Бутовская линия",
+        "stations": [],
         "color": "LightSteelBlue"
       }
     },
@@ -1709,6 +1927,7 @@
       "line": {
         "number": "12",
         "name": "Бутовская линия",
+        "stations": [],
         "color": "LightSteelBlue"
       }
     },
@@ -1717,6 +1936,7 @@
       "line": {
         "number": "12",
         "name": "Бутовская линия",
+        "stations": [],
         "color": "LightSteelBlue"
       }
     },
@@ -1725,6 +1945,7 @@
       "line": {
         "number": "12",
         "name": "Бутовская линия",
+        "stations": [],
         "color": "LightSteelBlue"
       }
     },
@@ -1733,6 +1954,7 @@
       "line": {
         "number": "12",
         "name": "Бутовская линия",
+        "stations": [],
         "color": "LightSteelBlue"
       }
     },
@@ -1741,6 +1963,7 @@
       "line": {
         "number": "15",
         "name": "Некрасовская линия",
+        "stations": [],
         "color": "PaleVioletRed"
       }
     },
@@ -1749,6 +1972,7 @@
       "line": {
         "number": "15",
         "name": "Некрасовская линия",
+        "stations": [],
         "color": "PaleVioletRed"
       }
     },
@@ -1757,6 +1981,7 @@
       "line": {
         "number": "15",
         "name": "Некрасовская линия",
+        "stations": [],
         "color": "PaleVioletRed"
       }
     },
@@ -1765,6 +1990,7 @@
       "line": {
         "number": "15",
         "name": "Некрасовская линия",
+        "stations": [],
         "color": "PaleVioletRed"
       }
     },
@@ -1773,6 +1999,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1781,6 +2008,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1789,6 +2017,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1797,6 +2026,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1805,6 +2035,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1813,6 +2044,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1821,6 +2053,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1829,6 +2062,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1837,6 +2071,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1845,6 +2080,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1853,6 +2089,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1861,6 +2098,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1869,6 +2107,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1877,6 +2116,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1885,6 +2125,7 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     },
@@ -1893,11 +2134,10 @@
       "line": {
         "number": "8А",
         "name": "Солнцевская линия",
+        "stations": [],
         "color": "Gold"
       }
     }
   ],
   "connections": {}
-}: {}
-}
 }
