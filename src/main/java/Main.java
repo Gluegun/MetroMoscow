@@ -38,7 +38,6 @@ public class Main {
 
         tables.remove(0);
 
-
         for (Element table : tables) {
 
             String stationName = table.child(1).text();

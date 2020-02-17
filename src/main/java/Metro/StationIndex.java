@@ -8,15 +8,14 @@ import java.util.stream.Collectors;
 
 public class StationIndex {
     @SerializedName("Lines")
-    HashMap<String, Line> number2line;
-    TreeSet<Station> stations;
-    TreeMap<Station, TreeSet<Station>> connections; // связи станций?
+    public HashMap<String, Line> number2line;
+    public TreeSet<Station> stations;
+    public TreeMap<Station, TreeSet<Station>> connections; // связи станций?
 
     public StationIndex() {
         number2line = new HashMap<>();
         stations = new TreeSet<>();
         connections = new TreeMap<>();
-
     }
 
     public void addStation(Station station) {
@@ -39,7 +38,7 @@ public class StationIndex {
     }
 
     public Line getLine(String number) {
-        return number2line.get(number); // получаем значение по ключу
+        return number2line.get(number); // получаем линию по номеру линии
     }
 
     public Station getStation(String name) {
