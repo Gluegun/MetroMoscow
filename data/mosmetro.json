@@ -1,5 +1,5 @@
 {
-  "number2line": {
+  "Lines": {
     "11": {
       "number": "11",
       "name": "Большая кольцевая линия",
@@ -2046,6 +2046,101 @@
         "name": "Солнцевская линия",
         "stations": [],
         "color": "Gold"
+      }
+    },
+    {
+      "name": "Озёрная",
+      "line": {
+        "number": "8А",
+        "name": "Солнцевская линия",
+        "stations": [],
+        "color": "Gold"
+      }
+    },
+    {
+      "name": "Парк Победы",
+      "line": {
+        "number": "8А",
+        "name": "Солнцевская линия",
+        "stations": [],
+        "color": "Gold"
+      }
+    },
+    {
+      "name": "Петровский парк",
+      "line": {
+        "number": "8А",
+        "name": "Солнцевская линия",
+        "stations": [],
+        "color": "Gold"
+      }
+    },
+    {
+      "name": "Раменки",
+      "line": {
+        "number": "8А",
+        "name": "Солнцевская линия",
+        "stations": [],
+        "color": "Gold"
+      }
+    },
+    {
+      "name": "Рассказовка",
+      "line": {
+        "number": "8А",
+        "name": "Солнцевская линия",
+        "stations": [],
+        "color": "Gold"
+      }
+    },
+    {
+      "name": "Савёловская",
+      "line": {
+        "number": "8А",
+        "name": "Солнцевская линия",
+        "stations": [],
+        "color": "Gold"
+      }
+    },
+    {
+      "name": "Солнцево",
+      "line": {
+        "number": "8А",
+        "name": "Солнцевская линия",
+        "stations": [],
+        "color": "Gold"
+      }
+    },
+    {
+      "name": "Хорошёвская",
+      "line": {
+        "number": "8А",
+        "name": "Солнцевская линия",
+        "stations": [],
+        "color": "Gold"
+      }
+    },
+    {
+      "name": "ЦСКА",
+      "line": {
+        "number": "8А",
+        "name": "Солнцевская линия",
+        "stations": [],
+        "color": "Gold"
+      }
+    },
+    {
+      "name": "Шелепиха",
+      "line": {
+        "number": "8А",
+        "name": "Солнцевская линия",
+        "stations": [],
+        "color": "Gold"
+      }
+    }
+  ],
+  "connections": {}
+}   "color": "Gold"
       }
     },
     {
