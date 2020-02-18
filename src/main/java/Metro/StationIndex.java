@@ -1,5 +1,6 @@
 package Metro;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.beans.Transient;
@@ -7,10 +8,10 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class StationIndex {
-    @SerializedName("Lines")
-    public HashMap<String, Line> number2line;
-    public TreeSet<Station> stations;
-    public TreeMap<Station, TreeSet<Station>> connections; // связи станций?
+
+    private HashMap<String, Line> number2line;
+    private TreeSet<Station> stations;
+    private TreeMap<Station, TreeSet<Station>> connections; // связи станций?
 
     public StationIndex() {
         number2line = new HashMap<>();
@@ -39,6 +40,15 @@ public class StationIndex {
 
     public Line getLine(String number) {
         return number2line.get(number); // получаем линию по номеру линии
+    }
+
+    public List<Line> getAllLines() {
+        List<Line> linesList = new ArrayList<>();
+
+        number2line.entrySet().forEach(line -> linesList.add(line.getValue()));
+
+        return linesList;
+
     }
 
     public Station getStation(String name) {

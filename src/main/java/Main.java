@@ -7,6 +7,7 @@ import TestAndOther.ColorUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonSerializer;
 import com.google.gson.stream.JsonReader;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -14,6 +15,9 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.awt.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -57,14 +61,17 @@ public class Main {
 
             index.addStation(station);
             index.addLine(line);
+            index.getLine(lineNumber).addStation(station);
+
             if (stationName.equals("Некрасовка")) break;
         }
+        GsonBuilder gsonBuilder = new GsonBuilder().setPrettyPrinting();
 
-        Gson gson = new GsonBuilder()
-                .setPrettyPrinting()
-                .create();
+        gsonBuilder.registerTypeAdapter(Line.class, new LineSerializer()).registerTypeAdapter(Station.class, new StationSerializer());
 
+        Gson gson = gsonBuilder.create();
         String json = gson.toJson(index);
+        
 
         try {
 
@@ -80,7 +87,7 @@ public class Main {
             ex.printStackTrace();
         }
 
-        StationIndex stationIndex = gson.fromJson(json, StationIndex.class);
+        index.getAllLines().forEach(line -> System.out.println(line.getStations()));
 
 
     }

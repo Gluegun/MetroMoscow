@@ -10,7 +10,6 @@ public class Station implements Comparable<Station> {
         this.line = line;
     }
 
-
     public Line getLine() {
         return line;
     }
