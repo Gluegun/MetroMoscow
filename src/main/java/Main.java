@@ -1,31 +1,17 @@
 import JsonSerializer.LineSerializer;
 import JsonSerializer.StationSerializer;
 import Metro.Line;
+import Metro.MetroUtil;
 import Metro.Station;
 import Metro.StationIndex;
-import TestAndOther.ColorUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonSerializer;
-import com.google.gson.stream.JsonReader;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
-import java.awt.*;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
 
 
 public class Main {
@@ -34,44 +20,14 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        Document doc = Jsoup.connect(url).maxBodySize(0).get();
+        StationIndex index = MetroUtil.createIndex();
 
-        StationIndex index = new StationIndex();
-
-        Elements tables = doc.select("table.standard.sortable tr");
-
-        tables.remove(0);
-
-        for (Element table : tables) {
-
-            String stationName = table.child(1).text();
-            String lineName = table.select("img[alt]").first().attr("alt");
-            String lineNumber = table.child(0).child(0).select("span").text();
-            String color;
-            String hexValue = table.child(0).attr("style");
-
-            if (!hexValue.isEmpty()) color = colorConverter(hexValue);
-            else continue;
-
-            System.out.println("Станция: " + stationName);
-            System.out.println("Линия №" + lineNumber + " " + lineName + " " + color);
-
-            Line line = new Line(lineNumber, lineName, color);
-            Station station = new Station(stationName, line);
-
-            index.addStation(station);
-            index.addLine(line);
-            index.getLine(lineNumber).addStation(station);
-
-            if (stationName.equals("Некрасовка")) break;
-        }
         GsonBuilder gsonBuilder = new GsonBuilder().setPrettyPrinting();
 
         gsonBuilder.registerTypeAdapter(Line.class, new LineSerializer()).registerTypeAdapter(Station.class, new StationSerializer());
 
         Gson gson = gsonBuilder.create();
         String json = gson.toJson(index);
-        
 
         try {
 
@@ -81,26 +37,9 @@ public class Main {
             if (!Files.exists(filePath)) Files.createFile(filePath);
             Files.write(filePath, json.getBytes(), StandardOpenOption.WRITE);
 
-
         } catch (
                 Exception ex) {
             ex.printStackTrace();
         }
-
-        index.getAllLines().forEach(line -> System.out.println(line.getStations()));
-
-
-    }
-
-    public static String colorConverter(String hexValue) {
-
-        String cutHexValue = hexValue.substring(hexValue.indexOf("#"), hexValue.indexOf("#") + 7);
-        ColorUtils colorUtils = new ColorUtils();
-        Color decode = Color.decode(cutHexValue);
-        int r = decode.getRed();
-        int g = decode.getGreen();
-        int b = decode.getBlue();
-        String color = colorUtils.getColorNameFromRgb(r, g, b);
-        return color;
     }
 }

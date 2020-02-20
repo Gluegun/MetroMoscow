@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 public class StationIndex {
 
+    @SerializedName("Lines")
     private HashMap<String, Line> number2line;
     private TreeSet<Station> stations;
     private TreeMap<Station, TreeSet<Station>> connections; // связи станций?
@@ -45,7 +46,7 @@ public class StationIndex {
     public List<Line> getAllLines() {
         List<Line> linesList = new ArrayList<>();
 
-        number2line.entrySet().forEach(line -> linesList.add(line.getValue()));
+        number2line.forEach((key, value) -> linesList.add(value));
 
         return linesList;
 
