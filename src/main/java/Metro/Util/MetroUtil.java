@@ -1,5 +1,8 @@
-package Metro;
+package Metro.Util;
 
+import Metro.Core.Line;
+import Metro.Core.Station;
+import Metro.StationIndex;
 import TestAndOther.ColorUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

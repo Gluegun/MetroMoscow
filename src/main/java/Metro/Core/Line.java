@@ -1,6 +1,4 @@
-package Metro;
-
-import com.google.gson.annotations.Expose;
+package Metro.Core;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,14 +6,16 @@ import java.util.List;
 public class Line implements Comparable<Line> {
     private String number;
     private String name;
-    public List<Station> stations;
+    private List<Station> stations;
     private String color;
+    private List<String> stationsName;
 
     public Line(String number, String name, String color) {
         this.number = number;
         this.name = name;
         this.color = color;
         this.stations = new ArrayList<>();
+        this.stationsName = new ArrayList<>();
     }
 
     public String getNumber() {
@@ -32,10 +32,15 @@ public class Line implements Comparable<Line> {
 
     public void addStation(Station station) {
         stations.add(station);
+        stationsName.add(station.getName());
     }
 
     public List<Station> getStations() {
         return stations;
+    }
+
+    public List<String> getStationsName() {
+        return stationsName;
     }
 
     @Override

@@ -1,6 +1,6 @@
 package JsonSerializer;
 
-import Metro.Station;
+import Metro.Core.Station;
 import com.google.gson.*;
 
 import java.lang.reflect.Type;

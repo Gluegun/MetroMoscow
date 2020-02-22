@@ -1,9 +1,9 @@
 package Metro;
 
-import com.google.gson.annotations.Expose;
+import Metro.Core.Line;
+import Metro.Core.Station;
 import com.google.gson.annotations.SerializedName;
 
-import java.beans.Transient;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -13,11 +13,13 @@ public class StationIndex {
     private HashMap<String, Line> number2line;
     private TreeSet<Station> stations;
     private TreeMap<Station, TreeSet<Station>> connections; // связи станций?
+   // private TreeMap<String, List<Station>> stationsToLine;
 
     public StationIndex() {
         number2line = new HashMap<>();
         stations = new TreeSet<>();
         connections = new TreeMap<>();
+        //stationsToLine = new TreeMap<>();
     }
 
     public void addStation(Station station) {

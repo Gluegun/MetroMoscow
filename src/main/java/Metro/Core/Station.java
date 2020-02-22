@@ -1,4 +1,4 @@
-package Metro;
+package Metro.Core;
 
 public class Station implements Comparable<Station> {
 

@@ -1,9 +1,8 @@
 import JsonSerializer.LineSerializer;
 import JsonSerializer.StationSerializer;
-import Metro.Line;
-import Metro.MetroUtil;
-import Metro.Station;
-import Metro.StationIndex;
+import Metro.Core.Line;
+import Metro.Core.Station;
+import Metro.Util.StationIndexUtil;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -20,14 +19,15 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        StationIndex index = MetroUtil.createIndex();
+        StationIndexUtil testIndex = new StationIndexUtil();
 
-        GsonBuilder gsonBuilder = new GsonBuilder().setPrettyPrinting();
+        GsonBuilder gsonBuilder = new GsonBuilder().registerTypeAdapter(Line.class, new LineSerializer())
+                .registerTypeAdapter(Station.class, new StationSerializer());
 
-        gsonBuilder.registerTypeAdapter(Line.class, new LineSerializer()).registerTypeAdapter(Station.class, new StationSerializer());
+        Gson gson = gsonBuilder.setPrettyPrinting().create();
 
-        Gson gson = gsonBuilder.create();
-        String json = gson.toJson(index);
+        String json = gson.toJson(testIndex);
+
 
         try {
 
