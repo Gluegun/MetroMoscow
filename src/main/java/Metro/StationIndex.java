@@ -2,24 +2,20 @@ package Metro;
 
 import Metro.Core.Line;
 import Metro.Core.Station;
-import com.google.gson.annotations.SerializedName;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class StationIndex {
 
-    @SerializedName("Lines")
     private HashMap<String, Line> number2line;
     private TreeSet<Station> stations;
     private TreeMap<Station, TreeSet<Station>> connections; // связи станций?
-   // private TreeMap<String, List<Station>> stationsToLine;
 
     public StationIndex() {
         number2line = new HashMap<>();
         stations = new TreeSet<>();
         connections = new TreeMap<>();
-        //stationsToLine = new TreeMap<>();
     }
 
     public void addStation(Station station) {
@@ -47,9 +43,7 @@ public class StationIndex {
 
     public List<Line> getAllLines() {
         List<Line> linesList = new ArrayList<>();
-
         number2line.forEach((key, value) -> linesList.add(value));
-
         return linesList;
 
     }
@@ -62,6 +56,14 @@ public class StationIndex {
         }
         return null;
     }
+
+    /*public List<Station> getAllStations() {
+        List<Station> stations = new ArrayList<>();
+        number2line.forEach((key, value) -> {
+            stations.add((Station) value.getStationsName());
+        });
+        return stations;
+    }*/
 
     public Station getStation(String name, String lineNumber) {
         Station query = new Station(name, getLine(lineNumber));

@@ -2,6 +2,7 @@ package Metro.Util;
 
 import Metro.Core.Line;
 import Metro.StationIndex;
+import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
 import java.util.List;
@@ -23,7 +24,6 @@ public class StationIndexUtil {
     private Map<String, List<String>> stations = createTestIndex();
 
     private List<Line> lines = index.getAllLines();
-
 
     private static Map<String, List<String>> createTestIndex() {
 
