@@ -47,38 +47,23 @@ class TestClass {
             String stationName = table.child(1).text();
             if (stationName.equals("Название станции")) continue;
             String lineName = table.select("img[alt]").first().attr("alt");
-            String lineNumber = table.child(0).child(0).select("span").text();
 
             Elements transitStationsElements = table.select("td").select("span").select("a").select("img[alt]");
 
-            System.out.println("\tСтанция: " + stationName + "\n\tЛиния: " + lineName + "\n\tПереход: " + transitStationsElements + "\n==========");
-
-
             for (int i = 0; i < transitStationsElements.size(); i++) {
-
                 if (!transitStationsElements.get(i).toString().isEmpty()) {
-
                     String s = transitStationsElements.get(i).select("img").attr("alt");
-                    System.out.println("\tСтанция: " + stationName + "\n\tЛиния: " + lineName + "\n\tПереход: "
-                            + s + "\n==========");
                     if (s.contains("Переход") || s.contains("Кросс")) {
-
-//                        System.out.println("\t\nСтанция: " + stationName + "\n\tЛиния: " + lineName
-//                                + "\n\t\tПереход: " + s);
                         transitionStation = s;
                     }
-//                    else System.out.println("\t\nСтанция: " + stationName + "\n\tЛиния: " + lineName
-//                            + "\nСтанция без переходов");
                 }
                 if (!transitionStation.isEmpty()) {
-                    //System.out.println(transitionStation);
                     String cutTransitionStation = transitionStation.substring(transitionStation.indexOf("станцию") + 8);
-//                    System.out.println("Переход: " + cutTransitionStation);
-                    //extractStation(transitionStation, cutTransitionStation);
+                    extractStation(transitionStation, cutTransitionStation);
                 }
             }
 
-        }*/
+        }*/ //
     }
 
 
@@ -163,69 +148,72 @@ class TestClass {
 
         if (transitionStation.contains("Московского центрального кольца")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Московского центрального кольца"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Кольцевой линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Кольцевой линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Калужско-Рижской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Калужско-Рижской линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Таганско-Краснопресненской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Таганско-Краснопресненской линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Люблинско-Дмитровской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Люблинско-Дмитровской линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Замоскворецкой линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Замоскворецкой линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Арбатско-Покровской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Арбатско-Покровской линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Филёвской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Филёвской линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Серпуховско-Тимирязевской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Серпуховско-Тимирязевской линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Большой кольцевой линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Большой кольцевой линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Калининской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Калининской линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Каховской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Каховской линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Солнцевской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Солнцевской линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Бутовской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Бутовской линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Московского монорельса")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Московского монорельса"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
         } else if (transitionStation.contains("Некрасовской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Некрасовской линии"));
-            System.out.println("Переход: " + stationName);
+            System.out.println("Переход на станцию: " + stationName);
 
-        } else System.out.println("Переход: " + cutTransitionStation);
+        } else if (transitionStation.contains("Сокольнической линии")) {
+            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Сокольнической линии"));
+            System.out.println("Переход на станцию: " + stationName);
+
+        }
     }
-
 }
