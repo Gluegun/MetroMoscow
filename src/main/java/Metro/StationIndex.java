@@ -11,11 +11,13 @@ public class StationIndex {
     private HashMap<String, Line> number2line;
     private TreeSet<Station> stations;
     private TreeMap<Station, TreeSet<Station>> connections; // связи станций?
+    private TreeMap<String, TreeSet<String>> connectionsString; // связи станций? // TEST удалить
 
     public StationIndex() {
         number2line = new HashMap<>();
         stations = new TreeSet<>();
         connections = new TreeMap<>();
+        connectionsString = new TreeMap<>();
     }
 
     public void addStation(Station station) {
@@ -37,6 +39,18 @@ public class StationIndex {
         }
     }
 
+
+    /*public void addConnection(List<String> stations) {
+        for (String stationName : stations) {
+            if (!connectionsString.containsKey(stationName)) { // если TreeMap connections не содержит ключ(станция)
+                connectionsString.put(stationName, new TreeSet<>()); // добавляем ключ(станция) в TreeMap connections с новым TreeSet'ом
+            }
+            TreeSet<String> connectedStations = connectionsString.get(stationName); // новый трисэт connectedStations = connections.get(ключ(станция))
+            connectedStations.addAll(stations.stream() //добавляем все полученные станции в список станций
+                    .filter(s -> !s.equals(stationName)).collect(Collectors.toList()));
+        }
+    }*/
+
     public Line getLine(String number) {
         return number2line.get(number); // получаем линию по номеру линии
     }
@@ -57,6 +71,8 @@ public class StationIndex {
         return null;
     }
 
+
+
     /*public List<Station> getAllStations() {
         List<Station> stations = new ArrayList<>();
         number2line.forEach((key, value) -> {
@@ -74,6 +90,13 @@ public class StationIndex {
     public Set<Station> getConnectedStations(Station station) {
         if (connections.containsKey(station)) {
             return connections.get(station);
+        }
+        return new TreeSet<>();
+    }
+
+    public Set<String> getConnectedStations(String stationName) {
+        if (connectionsString.containsKey(stationName)) {
+            return connectionsString.get(stationName);
         }
         return new TreeSet<>();
     }
