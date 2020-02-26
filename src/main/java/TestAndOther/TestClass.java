@@ -37,156 +37,13 @@ class TestClass {
         addStationToLine(table2, index);
         addStationToLine(table3, index);
 
+        parseConnections(table1, index);
+        parseConnections(table2, index);
+        parseConnections(table3, index);
+
         /*parseConnections(table1);
         parseConnections(table2);
         parseConnections(table3);*/
-
-
-        for (Element table : table1) {
-
-
-            String stationName = table.child(1).text();
-            if (stationName.equals("Название станции")) continue;
-
-            String lineNumber = table.child(0).child(0).select("span").text();
-            Line line = index.getLine(lineNumber);
-
-            System.out.println("Станция: " + stationName + " Линия: " + line.getNumber() + " " + line.getName());
-            String numberOfTransitLine = table.child(3).text();
-            if (numberOfTransitLine.isEmpty()) {
-                System.out.println("Перехода нет");
-                System.out.println();
-                continue;
-            }
-
-            Elements transfer = table.select("td:nth-of-type(4)").select("span[title]");
-
-            ArrayList<Station> stations = new ArrayList<>();
-//            Station transitStation = null;
-
-            for (Element singleTransfer : transfer) {
-
-                String transitionStation = singleTransfer.select("span").attr("title");
-                String cutTransitionStation = transitionStation.substring(transitionStation.indexOf("станцию") + 8);
-                String transitStationName = extractStation(transitionStation, cutTransitionStation);
-                System.out.println("Переход на станцию: " + transitStationName);
-
-                Station transitStation = index.getStation(transitStationName);
-
-                stations.add(transitStation);
-
-                if (numberOfTransitLine.contains("8А11")) {
-                    numberOfTransitLine = numberOfTransitLine.replaceAll("8А11", "8А 11");
-                }
-            }
-
-            int size = stations.size();
-            if (size == 1) {
-                System.out.println(size + " переход " + stations.toString() + "\n");
-            }
-            if (size == 2 || size == 3) {
-                System.out.println(size + " перехода " + stations.toString() + "\n");
-            } else continue;
-
-            index.addConnection(stations);
-        }
-
-        for (Element table : table2) {
-
-            String stationName = table.child(1).text();
-            if (stationName.equals("Название станции")) continue;
-
-            String lineNumber = table.child(0).child(0).select("span").text();
-            Line line = index.getLine(lineNumber);
-
-            System.out.println("Станция: " + stationName + " Линия: " + line.getNumber() + " " + line.getName());
-            String numberOfTransitLine = table.child(3).text();
-            if (numberOfTransitLine.isEmpty()) {
-                System.out.println("Перехода нет");
-                System.out.println();
-                continue;
-            }
-
-            Elements transfer = table.select("td:nth-of-type(4)").select("span[title]");
-
-            ArrayList<Station> stations = new ArrayList<>();
-//            Station transitStation = null;
-
-            for (Element singleTransfer : transfer) {
-
-                String transitionStation = singleTransfer.select("span").attr("title");
-                String cutTransitionStation = transitionStation.substring(transitionStation.indexOf("станцию") + 8);
-                String transitStationName = extractStation(transitionStation, cutTransitionStation);
-                System.out.println("Переход на станцию: " + transitStationName);
-
-                Station transitStation = index.getStation(transitStationName);
-
-                stations.add(transitStation);
-
-                if (numberOfTransitLine.contains("8А11")) {
-                    numberOfTransitLine = numberOfTransitLine.replaceAll("8А11", "8А 11");
-                }
-            }
-
-            int size = stations.size();
-            if (size == 1) {
-                System.out.println(size + " переход " + stations.toString() + "\n");
-            }
-            if (size == 2 || size == 3) {
-                System.out.println(size + " перехода " + stations.toString() + "\n");
-            } else continue;
-
-            index.addConnection(stations);
-
-        }
-
-        for (Element table : table2) {
-            String stationName = table.child(1).text();
-            if (stationName.equals("Название станции")) continue;
-
-            String lineNumber = table.child(0).child(0).select("span").text();
-            Line line = index.getLine(lineNumber);
-
-            System.out.println("Станция: " + stationName + " Линия: " + line.getNumber() + " " + line.getName());
-            String numberOfTransitLine = table.child(3).text();
-            if (numberOfTransitLine.isEmpty()) {
-                System.out.println("Перехода нет");
-                System.out.println();
-                continue;
-            }
-
-            Elements transfer = table.select("td:nth-of-type(4)").select("span[title]");
-
-            ArrayList<Station> stations = new ArrayList<>();
-//            Station transitStation = null;
-
-            for (Element singleTransfer : transfer) {
-
-                String transitionStation = singleTransfer.select("span").attr("title");
-                String cutTransitionStation = transitionStation.substring(transitionStation.indexOf("станцию") + 8);
-                String transitStationName = extractStation(transitionStation, cutTransitionStation);
-                System.out.println("Переход на станцию: " + transitStationName);
-
-                Station transitStation = index.getStation(transitStationName);
-
-                stations.add(transitStation);
-
-                if (numberOfTransitLine.contains("8А11")) {
-                    numberOfTransitLine = numberOfTransitLine.replaceAll("8А11", "8А 11");
-                }
-            }
-
-            int size = stations.size();
-            if (size == 1) {
-                System.out.println(size + " переход " + stations.toString() + "\n");
-            }
-            if (size == 2 || size == 3) {
-                System.out.println(size + " перехода " + stations.toString() + "\n");
-            } else continue;
-
-            index.addConnection(stations);
-
-        }
 
         System.out.println(index.getConnectedStations("Бульвар Рокоссовского Улица Подбельского (до 2014)"));
 
@@ -382,30 +239,52 @@ class TestClass {
         }
     }
 
-    public static void parseConnections(Elements tables) {
+    public static void parseConnections(Elements tables, StationIndex index) {
 
         for (Element table : tables) {
             String stationName = table.child(1).text();
-            String lineName;
-            String lineNumber;
             if (stationName.equals("Название станции")) continue;
 
-            String lineToBeChanged = table.child(3).text();
+            String lineNumber = table.child(0).child(0).select("span").text();
+            Line line = index.getLine(lineNumber);
 
-            if (lineToBeChanged.isEmpty()) {
-                System.out.println("Стация: " + stationName + " \nПереходов нет\n");
-            } else {
-                if (lineToBeChanged.contains("8А11")) {
-                    lineToBeChanged = lineToBeChanged.replace("8А11", "8А 11");
-                }
-                String[] stations = lineToBeChanged.split("\\s");
+            System.out.println("Станция: " + stationName + " Линия: " + line.getNumber() + " " + line.getName());
+            String numberOfTransitLine = table.child(3).text();
+            if (numberOfTransitLine.isEmpty()) {
+                System.out.println("Перехода нет");
+                System.out.println();
+                continue;
+            }
 
-                for (String station : stations) {
-                    lineName = index.getLine(station).getName();
-                    lineNumber = index.getLine(station).getNumber();
-                    System.out.println("=============\nСтанция: " + stationName + "\nПереход на линию: " + lineNumber + " " + lineName + "\n=============\n");
+            Elements transfer = table.select("td:nth-of-type(4)").select("span[title]");
+
+            ArrayList<Station> stations = new ArrayList<>();
+
+            for (Element singleTransfer : transfer) {
+
+                String transitionStation = singleTransfer.select("span").attr("title");
+                String cutTransitionStation = transitionStation.substring(transitionStation.indexOf("станцию") + 8);
+                String transitStationName = extractStation(transitionStation, cutTransitionStation);
+                System.out.println("Переход на станцию: " + transitStationName);
+
+                Station transitStation = index.getStation(transitStationName);
+
+                stations.add(transitStation);
+
+                if (numberOfTransitLine.contains("8А11")) {
+                    numberOfTransitLine = numberOfTransitLine.replaceAll("8А11", "8А 11");
                 }
             }
+
+            int size = stations.size();
+            if (size == 1) {
+                System.out.println(size + " переход " + stations.toString() + "\n");
+            }
+            if (size == 2 || size == 3) {
+                System.out.println(size + " перехода " + stations.toString() + "\n");
+            } else continue;
+
+            index.addConnection(stations);
 
         }
     }
