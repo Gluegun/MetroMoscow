@@ -91,6 +91,103 @@ class TestClass {
             index.addConnection(stations);
         }
 
+        for (Element table : table2) {
+
+            String stationName = table.child(1).text();
+            if (stationName.equals("Название станции")) continue;
+
+            String lineNumber = table.child(0).child(0).select("span").text();
+            Line line = index.getLine(lineNumber);
+
+            System.out.println("Станция: " + stationName + " Линия: " + line.getNumber() + " " + line.getName());
+            String numberOfTransitLine = table.child(3).text();
+            if (numberOfTransitLine.isEmpty()) {
+                System.out.println("Перехода нет");
+                System.out.println();
+                continue;
+            }
+
+            Elements transfer = table.select("td:nth-of-type(4)").select("span[title]");
+
+            ArrayList<Station> stations = new ArrayList<>();
+//            Station transitStation = null;
+
+            for (Element singleTransfer : transfer) {
+
+                String transitionStation = singleTransfer.select("span").attr("title");
+                String cutTransitionStation = transitionStation.substring(transitionStation.indexOf("станцию") + 8);
+                String transitStationName = extractStation(transitionStation, cutTransitionStation);
+                System.out.println("Переход на станцию: " + transitStationName);
+
+                Station transitStation = index.getStation(transitStationName);
+
+                stations.add(transitStation);
+
+                if (numberOfTransitLine.contains("8А11")) {
+                    numberOfTransitLine = numberOfTransitLine.replaceAll("8А11", "8А 11");
+                }
+            }
+
+            int size = stations.size();
+            if (size == 1) {
+                System.out.println(size + " переход " + stations.toString() + "\n");
+            }
+            if (size == 2 || size == 3) {
+                System.out.println(size + " перехода " + stations.toString() + "\n");
+            } else continue;
+
+            index.addConnection(stations);
+
+        }
+
+        for (Element table : table2) {
+            String stationName = table.child(1).text();
+            if (stationName.equals("Название станции")) continue;
+
+            String lineNumber = table.child(0).child(0).select("span").text();
+            Line line = index.getLine(lineNumber);
+
+            System.out.println("Станция: " + stationName + " Линия: " + line.getNumber() + " " + line.getName());
+            String numberOfTransitLine = table.child(3).text();
+            if (numberOfTransitLine.isEmpty()) {
+                System.out.println("Перехода нет");
+                System.out.println();
+                continue;
+            }
+
+            Elements transfer = table.select("td:nth-of-type(4)").select("span[title]");
+
+            ArrayList<Station> stations = new ArrayList<>();
+//            Station transitStation = null;
+
+            for (Element singleTransfer : transfer) {
+
+                String transitionStation = singleTransfer.select("span").attr("title");
+                String cutTransitionStation = transitionStation.substring(transitionStation.indexOf("станцию") + 8);
+                String transitStationName = extractStation(transitionStation, cutTransitionStation);
+                System.out.println("Переход на станцию: " + transitStationName);
+
+                Station transitStation = index.getStation(transitStationName);
+
+                stations.add(transitStation);
+
+                if (numberOfTransitLine.contains("8А11")) {
+                    numberOfTransitLine = numberOfTransitLine.replaceAll("8А11", "8А 11");
+                }
+            }
+
+            int size = stations.size();
+            if (size == 1) {
+                System.out.println(size + " переход " + stations.toString() + "\n");
+            }
+            if (size == 2 || size == 3) {
+                System.out.println(size + " перехода " + stations.toString() + "\n");
+            } else continue;
+
+            index.addConnection(stations);
+
+        }
+
         System.out.println(index.getConnectedStations("Бульвар Рокоссовского Улица Подбельского (до 2014)"));
 
 
@@ -354,6 +451,9 @@ class TestClass {
             }
             if (stationName.contains("Новоясеневская")) {
                 stationName = "Новоясеневская Битцевский парк (до 2008)";
+            }
+            if (stationName.contains("ВДНХ")){
+                stationName = "ВДНХ ВСХВ (до 1959)";
             }
             return stationName.trim();
         } else if (transitionStation.contains("Таганско-Краснопресненской линии")) {
