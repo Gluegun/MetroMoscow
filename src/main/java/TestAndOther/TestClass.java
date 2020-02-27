@@ -13,6 +13,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Set;
 import java.util.TreeSet;
 
 class TestClass {
@@ -42,7 +43,10 @@ class TestClass {
         parseConnections(table3, index);
 
 
-        System.out.println(index.getConnectedStations("Бульвар Рокоссовского Улица Подбельского (до 2014)"));
+        for (Station station : index.getLine("01").getStations()) {
+            Set<Station> connectedStations = index.getConnectedStations(station);
+            System.out.println(connectedStations);
+        }
 
 
 //        for (Element table : table1) {
