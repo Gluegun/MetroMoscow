@@ -41,6 +41,7 @@ class TestClass {
         parseConnections(table2, index);
         parseConnections(table3, index);
 
+
         System.out.println(index.getConnectedStations("Бульвар Рокоссовского Улица Подбельского (до 2014)"));
 
 
