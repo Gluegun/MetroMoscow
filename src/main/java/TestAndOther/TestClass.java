@@ -17,12 +17,12 @@ import java.util.Set;
 import java.util.TreeSet;
 
 class TestClass {
-    private static StationIndex index;
+
     private static String url = "https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%B9_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BC%D0%B5%D1%82%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%B5%D0%BD%D0%B0";
 
     public static void main(String[] args) throws IOException {
 
-        index = new StationIndex();
+        StationIndex index = new StationIndex();
 
         Document doc = Jsoup.connect(url).maxBodySize(0).get();
 
@@ -44,8 +44,9 @@ class TestClass {
 
 
         for (Station station : index.getLine("01").getStations()) {
+            System.out.println("Станция: " + station.getName());
             Set<Station> connectedStations = index.getConnectedStations(station);
-            System.out.println(connectedStations);
+            System.out.println("Переход: " + connectedStations);
         }
 
 
@@ -278,12 +279,15 @@ class TestClass {
             }
 
             int size = stations.size();
+
             if (size == 1) {
                 System.out.println(size + " переход " + stations.toString() + "\n");
             }
             if (size == 2 || size == 3) {
                 System.out.println(size + " перехода " + stations.toString() + "\n");
-            } else continue;
+            } else {
+                continue;
+            }
 
             index.addConnection(stations);
 
@@ -332,7 +336,7 @@ class TestClass {
             if (stationName.contains("Новоясеневская")) {
                 stationName = "Новоясеневская Битцевский парк (до 2008)";
             }
-            if (stationName.contains("ВДНХ")){
+            if (stationName.contains("ВДНХ")) {
                 stationName = "ВДНХ ВСХВ (до 1959)";
             }
             return stationName.trim();
@@ -356,6 +360,9 @@ class TestClass {
             return stationName.trim();
         } else if (transitionStation.contains("Арбатско-Покровской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Арбатско-Покровской линии"));
+            if (stationName.contains("Партизанская")) {
+                stationName = "Партизанская Измайловский парк культуры и отдыха имени Сталина (до 1947) Измайловская (до 1963) Измайловский парк (до 2005)";
+            }
             return stationName.trim();
         } else if (transitionStation.contains("Филёвской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Филёвской линии"));

@@ -13,7 +13,7 @@ public class LineSerializer implements JsonSerializer<Line> {
         JsonArray testArray = new JsonArray();
 
         result.addProperty("name", src.getName());
-        result.addProperty("number", src.getNumber());
+        //result.addProperty("number", src.getNumber());
         result.addProperty("color", src.getColor());
 
         return result;
