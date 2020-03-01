@@ -25,7 +25,9 @@ public class MetroUtil {
 
         Elements table1 = doc.select("table").get(3).select("tr");
         Elements table2 = doc.select("table").get(4).select("tr");
+        table2.remove(0);
         Elements table3 = doc.select("table").get(5).select("tr");
+        table3.remove(0);
 
         addLineToIndex(table1, index);
         addLineToIndex(table2, index);
@@ -35,9 +37,9 @@ public class MetroUtil {
         addStationToLine(table2, index);
         addStationToLine(table3, index);
 
-        parseConnections(table1, index);
+        /*parseConnections(table1, index);
         parseConnections(table2, index);
-        parseConnections(table3, index);
+        parseConnections(table3, index);*/
 
         return index;
     }
@@ -48,8 +50,7 @@ public class MetroUtil {
 
         for (Element table : tables) {
 
-            String stationName = table.child(1).text();
-            if (stationName.equals("Название станции")) continue;
+            String stationName = table.child(1).child(0).select("a[href]").text();
             String lineName = table.select("img[alt]").first().attr("alt");
             String lineNumber = table.child(0).child(0).select("span").text();
             String hexValue = table.child(0).attr("style");
@@ -62,12 +63,11 @@ public class MetroUtil {
     }
 
     public static void addStationToLine(Elements tables, StationIndex index) {
-
         Station station;
 
         for (Element table : tables) {
 
-            String stationName = table.child(1).text();
+            String stationName = table.child(1).child(0).select("a[href]").text();
             if (stationName.equals("Название станции")) continue;
             String lineNumber = table.child(0).child(0).select("span").text();
             station = new Station(stationName, index.getLine(lineNumber));
@@ -76,48 +76,58 @@ public class MetroUtil {
         }
     }
 
-    public static void parseConnections(Elements tables, StationIndex index) {
-
-        for (Element table : tables) {
-            String stationName = table.child(1).text();
-            if (stationName.equals("Название станции")) continue;
-
-            String lineNumber = table.child(0).child(0).select("span").text();
-            Line line = index.getLine(lineNumber);
-
+//    public static void parseConnections(Elements tables, StationIndex index) {
+//
+//        for (Element table : tables) {
+//            String stationName = table.child(1).child(0).select("a[href]").text();
+//            if (stationName.equals("Название станции")) continue;
+//
+//            String lineNumber = table.child(0).child(0).select("span").text();
+//            Line line = index.getLine(lineNumber);
+//
 //            System.out.println("Станция: " + stationName + " Линия: " + line.getNumber() + " " + line.getName());
-            String numberOfTransitLine = table.child(3).text();
-            if (numberOfTransitLine.isEmpty()) {
+//            String numberOfTransitLine = table.child(3).text();
+//            if (numberOfTransitLine.isEmpty()) {
 //                System.out.println("Перехода нет");
 //                System.out.println();
-                continue;
-            }
-
-            Elements transfer = table.select("td:nth-of-type(4)").select("span[title]");
-
-            ArrayList<Station> stations = new ArrayList<>();
-
-            for (Element singleTransfer : transfer) {
-
-                String transitionStation = singleTransfer.select("span").attr("title");
-                String cutTransitionStation = transitionStation.substring(transitionStation.indexOf("станцию") + 8);
-                String transitStationName = extractStation(transitionStation, cutTransitionStation);
+//                continue;
+//            }
+//
+//            Elements transfer = table.select("td:nth-of-type(4)").select("span[title]");
+//
+//            ArrayList<Station> stations = new ArrayList<>();
+//
+//            for (Element singleTransfer : transfer) {
+//
+//                String transitionStation = singleTransfer.select("span").attr("title");
+//                String cutTransitionStation = transitionStation.substring(transitionStation.indexOf("станцию") + 8);
+//                String transitStationName = extractStation(transitionStation, cutTransitionStation);
 //                System.out.println("Переход на станцию: " + transitStationName);
-
-                Station transitStation = index.getStation(transitStationName);
-
-                stations.add(transitStation);
-
-                if (numberOfTransitLine.contains("8А11")) {
-                    numberOfTransitLine = numberOfTransitLine.replaceAll("8А11", "8А 11");
-                }
-            }
-
-
-            index.addConnection(stations);
-
-        }
-    }
+//
+//                Station transitStation = index.getStation(transitStationName);
+//
+//                stations.add(transitStation);
+//
+//                if (numberOfTransitLine.contains("8А11")) {
+//                    numberOfTransitLine = numberOfTransitLine.replaceAll("8А11", "8А 11");
+//                }
+//            }
+//
+//            int size = stations.size();
+//
+//            if (size == 1) {
+//                System.out.println(size + " переход " + stations.toString() + "\n");
+//            }
+//            if (size == 2 || size == 3) {
+//                System.out.println(size + " перехода " + stations.toString() + "\n");
+//            } else {
+//                continue;
+//            }
+//
+//            index.addConnection(stations);
+//
+//        }
+//    }
 
     private static String extractStation(String transitionStation, String cutTransitionStation) {
         String stationName;

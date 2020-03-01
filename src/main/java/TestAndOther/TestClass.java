@@ -28,7 +28,9 @@ class TestClass {
 
         Elements table1 = doc.select("table").get(3).select("tr");
         Elements table2 = doc.select("table").get(4).select("tr");
+        table2.remove(0);
         Elements table3 = doc.select("table").get(5).select("tr");
+        table3.remove(0);
 
         addLineToIndex(table1, index);
         addLineToIndex(table2, index);
@@ -38,7 +40,7 @@ class TestClass {
         addStationToLine(table2, index);
         addStationToLine(table3, index);
 
-        parseConnections(table1, index);
+     /*   parseConnections(table1, index);
         parseConnections(table2, index);
         parseConnections(table3, index);
 
@@ -47,7 +49,44 @@ class TestClass {
             System.out.println("Станция: " + station.getName());
             Set<Station> connectedStations = index.getConnectedStations(station);
             System.out.println("Переход: " + connectedStations);
+        }*/
+
+        /*ArrayList<String> stationNames1 = new ArrayList<>();
+
+        table1.remove(0);
+        for (Element table : table1) {
+
+            String stationName = table.child(1).child(0).select("a[href]").text();
+            System.out.println(stationName);
+            stationNames1.add(stationName);
+
         }
+
+        System.out.println(stationNames1.size() + "\n==========================================\n");
+
+        ArrayList<String> stationNames2 = new ArrayList<>();
+
+        table2.remove(0);
+        for (Element table : table2) {
+
+            String stationName = table.child(1).child(0).select("a[href]").text();
+            System.out.println(stationName);
+            stationNames2.add(stationName);
+
+        }
+        System.out.println(stationNames2.size() + "\n==========================================\n");
+
+        ArrayList<String> stationNames3 = new ArrayList<>();
+
+        table3.remove(0);
+        for (Element table : table3) {
+
+            String stationName = table.child(1).child(0).select("a[href]").text();
+            System.out.println(stationName);
+            stationNames3.add(stationName);
+        }
+
+        System.out.println(stationNames3.size() + "\n==========================================\n");*/
 
 
 //        for (Element table : table1) {
@@ -213,8 +252,7 @@ class TestClass {
 
         for (Element table : tables) {
 
-            String stationName = table.child(1).text();
-            if (stationName.equals("Название станции")) continue;
+            String stationName = table.child(1).child(0).select("a[href]").text();
             String lineName = table.select("img[alt]").first().attr("alt");
             String lineNumber = table.child(0).child(0).select("span").text();
             String hexValue = table.child(0).attr("style");
@@ -227,17 +265,17 @@ class TestClass {
     }
 
     public static void addStationToLine(Elements tables, StationIndex index) {
-
         Station station;
 
         for (Element table : tables) {
 
-            String stationName = table.child(1).text();
+            String stationName = table.child(1).child(0).select("a[href]").text();
             if (stationName.equals("Название станции")) continue;
             String lineNumber = table.child(0).child(0).select("span").text();
             station = new Station(stationName, index.getLine(lineNumber));
             index.addStation(station);
             index.getLine(lineNumber).addStation(station);
+            System.out.println(stationName);
         }
     }
 

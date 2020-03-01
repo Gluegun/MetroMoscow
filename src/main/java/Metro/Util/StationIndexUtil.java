@@ -29,7 +29,7 @@ public class StationIndexUtil {
 
     private Map<String, Line> lines = createLines();
 
-    private Map<String, Set<Station>> connectedStations = createConnections();
+    private Map<String, Set<Station>> connections = createConnections();
 
     private Map<String, Set<Station>> createConnections() {
 
@@ -55,7 +55,7 @@ public class StationIndexUtil {
 
         TreeMap<String, List<String>> stations = new TreeMap<>();
 
-        index.getAllLines().forEach(line -> stations.put(line.getName(), line.getStationsName()));
+        index.getAllLines().forEach(line -> stations.put(line.getNumber(), line.getStationsName()));
 
         return stations;
     }
