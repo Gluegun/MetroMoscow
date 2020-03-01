@@ -40,7 +40,7 @@ class TestClass {
         addStationToLine(table2, index);
         addStationToLine(table3, index);
 
-     /*   parseConnections(table1, index);
+        parseConnections(table1, index);
         parseConnections(table2, index);
         parseConnections(table3, index);
 
@@ -49,44 +49,7 @@ class TestClass {
             System.out.println("Станция: " + station.getName());
             Set<Station> connectedStations = index.getConnectedStations(station);
             System.out.println("Переход: " + connectedStations);
-        }*/
-
-        /*ArrayList<String> stationNames1 = new ArrayList<>();
-
-        table1.remove(0);
-        for (Element table : table1) {
-
-            String stationName = table.child(1).child(0).select("a[href]").text();
-            System.out.println(stationName);
-            stationNames1.add(stationName);
-
         }
-
-        System.out.println(stationNames1.size() + "\n==========================================\n");
-
-        ArrayList<String> stationNames2 = new ArrayList<>();
-
-        table2.remove(0);
-        for (Element table : table2) {
-
-            String stationName = table.child(1).child(0).select("a[href]").text();
-            System.out.println(stationName);
-            stationNames2.add(stationName);
-
-        }
-        System.out.println(stationNames2.size() + "\n==========================================\n");
-
-        ArrayList<String> stationNames3 = new ArrayList<>();
-
-        table3.remove(0);
-        for (Element table : table3) {
-
-            String stationName = table.child(1).child(0).select("a[href]").text();
-            System.out.println(stationName);
-            stationNames3.add(stationName);
-        }
-
-        System.out.println(stationNames3.size() + "\n==========================================\n");*/
 
 
 //        for (Element table : table1) {
@@ -275,21 +238,19 @@ class TestClass {
             station = new Station(stationName, index.getLine(lineNumber));
             index.addStation(station);
             index.getLine(lineNumber).addStation(station);
-            System.out.println(stationName);
         }
     }
 
     public static void parseConnections(Elements tables, StationIndex index) {
 
         for (Element table : tables) {
-            String stationName = table.child(1).text();
-            if (stationName.equals("Название станции")) continue;
-
+            String stationName = table.child(1).child(0).select("a[href]").text();
             String lineNumber = table.child(0).child(0).select("span").text();
             Line line = index.getLine(lineNumber);
 
             System.out.println("Станция: " + stationName + " Линия: " + line.getNumber() + " " + line.getName());
             String numberOfTransitLine = table.child(3).text();
+
             if (numberOfTransitLine.isEmpty()) {
                 System.out.println("Перехода нет");
                 System.out.println();
@@ -330,7 +291,9 @@ class TestClass {
             index.addConnection(stations);
 
         }
+
     }
+
 
     public static String colorConverter(String hexValue) {
 
@@ -353,36 +316,12 @@ class TestClass {
             return stationName.trim();
         } else if (transitionStation.contains("Кольцевой линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Кольцевой линии"));
-            if (stationName.contains("Парк культуры")) {
-                stationName = "Парк культуры Парк Культуры имени Горького (до 1960-х)";
-            }
-            if (stationName.contains("Проспект Мира")) {
-                stationName = "Проспект Мира Ботанический сад (до 1966)";
-            }
-            if (stationName.contains("Добрынинская")) {
-                stationName = "Добрынинская Серпуховская (до 1961)";
-            }
             return stationName.trim();
         } else if (transitionStation.contains("Калужско-Рижской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Калужско-Рижской линии"));
-            if (stationName.contains("Проспект Мира")) {
-                stationName = "Проспект Мира Ботанический сад (до 1966)";
-            }
-            if (stationName.contains("Китай-город")) {
-                stationName = "Китай-город Площадь Ногина (до 1990)";
-            }
-            if (stationName.contains("Новоясеневская")) {
-                stationName = "Новоясеневская Битцевский парк (до 2008)";
-            }
-            if (stationName.contains("ВДНХ")) {
-                stationName = "ВДНХ ВСХВ (до 1959)";
-            }
             return stationName.trim();
         } else if (transitionStation.contains("Таганско-Краснопресненской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Таганско-Краснопресненской линии"));
-            if (stationName.contains("Китай-город")) {
-                stationName = "Китай-город Площадь Ногина (до 1990)";
-            }
             return stationName.trim();
         } else if (transitionStation.contains("Люблинско-Дмитровской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Люблинско-Дмитровской линии"));
@@ -390,25 +329,16 @@ class TestClass {
         } else if (transitionStation.contains("Замоскворецкой линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Замоскворецкой линии"));
             if (stationName.contains("Театральная")) {
-                stationName = "Театральная Площадь Свердлова (до 1990)";
-            }
-            if (stationName.contains("Тверская")) {
-                stationName = "Тверская Горьковская (до 1990)";
+                stationName = "Театральная";
             }
             return stationName.trim();
         } else if (transitionStation.contains("Арбатско-Покровской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Арбатско-Покровской линии"));
-            if (stationName.contains("Партизанская")) {
-                stationName = "Партизанская Измайловский парк культуры и отдыха имени Сталина (до 1947) Измайловская (до 1963) Измайловский парк (до 2005)";
-            }
             return stationName.trim();
         } else if (transitionStation.contains("Филёвской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Филёвской линии"));
             if (stationName.contains("Александровский сад")) {
-                stationName = "Александровский сад Улица Коминтерна (до 1946) Калининская (до 1990)";
-            }
-            if (stationName.contains("Выставочная")) {
-                stationName = "Выставочная Деловой центр (до 2008)";
+                stationName = "Александровский сад";
             }
             return stationName.trim();
         } else if (transitionStation.contains("Серпуховско-Тимирязевской линии")) {
@@ -422,9 +352,6 @@ class TestClass {
             return stationName.trim();
         } else if (transitionStation.contains("Каховской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Каховской линии"));
-            if (stationName.contains("Каховская")) {
-                stationName = "Каховская (закрыта с 30 марта 2019)";
-            }
             return stationName.trim();
         } else if (transitionStation.contains("Солнцевской линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Солнцевской линии"));
@@ -440,18 +367,6 @@ class TestClass {
             return stationName.trim();
         } else if (transitionStation.contains("Сокольнической линии")) {
             stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Сокольнической линии"));
-            if (stationName.contains("Охотный Ряд")) {
-                stationName = "Охотный Ряд Имени Л. М. Кагановича (с 1955 до 1957) Проспект Маркса (с 1961 до 1990)";
-            }
-            if (stationName.contains("Парк культуры")) {
-                stationName = "Парк культуры Парк Культуры имени Горького (до 1960-х)";
-            }
-            if (stationName.contains("Чистые пруды")) {
-                stationName = "Чистые пруды Кировская (до 1990)";
-            }
-            if (stationName.contains("Лубянка")) {
-                stationName = "Лубянка Дзержинская (до 1990)";
-            }
             return stationName.trim();
         } else return null;
     }

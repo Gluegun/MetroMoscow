@@ -12,7 +12,7 @@ public class StationSerializer implements com.google.gson.JsonSerializer<Station
     public JsonElement serialize(Station src, Type typeOfSrc, JsonSerializationContext context) {
 
         JsonObject result = new JsonObject();
-        result.addProperty("name", src.getName());
+        result.addProperty("station", src.getName());
         result.addProperty("line", src.getLine().getName());
 
 
