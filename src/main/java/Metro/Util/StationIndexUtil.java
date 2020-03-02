@@ -29,17 +29,18 @@ public class StationIndexUtil {
 
     private Map<String, Line> lines = createLines();
 
-    private Map<String, Set<Station>> connections = createConnections();
+    private TreeMap<String, Set<Station>> connections = createConnections();
 
-    private Map<String, Set<Station>> createConnections() {
+    private TreeMap<String, Set<Station>> createConnections() {
 
-        Map<String, Set<Station>> connectedStations = new TreeMap<>();
+        TreeMap<String, Set<Station>> connectedStations = new TreeMap<>();
 
         for (Line line : index.getAllLines()) {
 
             for (Station station : line.getStations()) {
 
                 Set<Station> connectedStationsSet = index.getConnectedStations(station);
+
                 if (!connectedStationsSet.isEmpty()) {
                     connectedStations.put(station.getName(), connectedStationsSet);
                 }
