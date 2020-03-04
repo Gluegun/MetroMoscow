@@ -34,8 +34,7 @@ public class Main {
             if (!Files.exists(filePath)) Files.createFile(filePath);
             Files.write(filePath, json.getBytes(), StandardOpenOption.WRITE);
 
-        } catch (
-                Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }

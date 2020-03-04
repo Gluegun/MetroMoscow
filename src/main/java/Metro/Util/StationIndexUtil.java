@@ -29,26 +29,26 @@ public class StationIndexUtil {
 
     private Map<String, Line> lines = createLines();
 
-    private TreeMap<String, Set<Station>> connections = createConnections();
+    private ArrayList<Set<Station>> connections = createConnections();
 
-    private TreeMap<String, Set<Station>> createConnections() {
+    private ArrayList<Set<Station>> createConnections() {
 
-        TreeMap<String, Set<Station>> connectedStations = new TreeMap<>();
+        connections = new ArrayList<>();
+        Set<Station> connectedStations;
 
         for (Line line : index.getAllLines()) {
 
             for (Station station : line.getStations()) {
-
-                Set<Station> connectedStationsSet = index.getConnectedStations(station);
-
-                if (!connectedStationsSet.isEmpty()) {
-                    connectedStations.put(station.getName(), connectedStationsSet);
+                connectedStations = index.getConnectedStations(station);
+                if (!connectedStations.isEmpty()) {
+                    connectedStations.add(station);
                 }
+                else continue;
+                connections.add(connectedStations);
             }
         }
 
-        return connectedStations;
-
+        return connections;
     }
 
 

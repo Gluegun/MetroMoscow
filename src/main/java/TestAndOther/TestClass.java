@@ -47,12 +47,25 @@ class TestClass {
         parseConnections(table3, index);
 
 
-        for (Station station : index.getLine("06").getStations()) {
-            Set<Station> connectedStations = index.getConnectedStations(station);
-            connectedStations.add(station);
-            System.out.println(connectedStations);
-            System.out.println();
+        ArrayList<Set<Station>> listOfSets = new ArrayList<>();
+        Set<Station> connectedStations;
+
+        for (Line line : index.getAllLines()) {
+            System.out.println(line.getName());
+            for (Station station : line.getStations()) {
+                connectedStations = index.getConnectedStations(station);
+                if (!connectedStations.isEmpty()) {
+                    connectedStations.add(station);
+                }
+                else continue;
+                System.out.println(connectedStations);
+                listOfSets.add(connectedStations);
+            }
+            System.out.println("==================\n");
         }
+
+        System.out.println(listOfSets.size());
+
     }
 
     public static void addLineToIndex(Elements tables, StationIndex index) {
@@ -174,67 +187,5 @@ class TestClass {
         return color;
     }
 
-    private static String extractStation(String transitionStation, String cutTransitionStation) {
-        String stationName;
-        int firstIndex = transitionStation.indexOf("станцию") + 8;
-
-        if (transitionStation.contains("Московского центрального кольца")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Московского центрального кольца"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Кольцевой линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Кольцевой линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Калужско-Рижской линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Калужско-Рижской линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Таганско-Краснопресненской линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Таганско-Краснопресненской линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Люблинско-Дмитровской линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Люблинско-Дмитровской линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Замоскворецкой линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Замоскворецкой линии"));
-            if (stationName.contains("Театральная")) {
-                stationName = "Театральная";
-            }
-            return stationName.trim();
-        } else if (transitionStation.contains("Арбатско-Покровской линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Арбатско-Покровской линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Филёвской линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Филёвской линии"));
-            if (stationName.contains("Александровский сад")) {
-                stationName = "Александровский сад";
-            }
-            return stationName.trim();
-        } else if (transitionStation.contains("Серпуховско-Тимирязевской линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Серпуховско-Тимирязевской линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Большой кольцевой линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Большой кольцевой линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Калининской линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Калининской линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Каховской линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Каховской линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Солнцевской линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Солнцевской линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Бутовской линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Бутовской линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Московского монорельса")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Московского монорельса"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Некрасовской линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Некрасовской линии"));
-            return stationName.trim();
-        } else if (transitionStation.contains("Сокольнической линии")) {
-            stationName = transitionStation.substring(firstIndex, transitionStation.indexOf("Сокольнической линии"));
-            return stationName.trim();
-        } else return null;
-    }
-}*/
+}
+*/
